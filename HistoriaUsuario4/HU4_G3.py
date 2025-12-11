@@ -1,13 +1,14 @@
-def guardar_metadatos_evaluacion():
-    global calculo_de_puntajes_termino
-    global resultados_finales
-    global informe_final
-    global metadatos_disponibles
+from datetime import datetime
 
-    if calculo_de_puntajes_termino == True:
-        fecha_hora_actual = obtener_fecha_y_hora_actual()
-        metadatos = {}
-        metadatos["fecha_hora_evaluacion"] = fecha_hora_actual
-        resultados_finales["metadatos"] = metadatos
-        informe_final["metadatos"] = metadatos
-        metadatos_disponibles = True
+def guardar_metadatos(tabla):
+    fecha_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    i = 0
+    while i < len(tabla):
+        tabla[i]["fecha_evaluacion"] = fecha_hora
+        i += 1
+    return tabla
+
+
+tabla_actualizada = guardar_metadatos(tabla_proveedores)
+print(tabla_actualizada)
+
