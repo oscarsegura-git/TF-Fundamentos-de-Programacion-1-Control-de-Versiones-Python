@@ -6,8 +6,7 @@ def insertar_proveedor(tabla, proveedor_validado):
                 "puntaje_total", "estado"]
 
     fila = {}
-
-    
+ 
     for columna in columnas:
         if columna in proveedor_validado:
             fila[columna] = proveedor_validado[columna]

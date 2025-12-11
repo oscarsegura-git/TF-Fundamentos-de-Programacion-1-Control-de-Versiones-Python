@@ -4,9 +4,7 @@ def validar_proveedor():
                            "precio", "calidad", "tiempo"]
 
     proveedor = {}
-
     proveedor_valido = True
-
     i = 0
 
     print("\n--- Ingreso de datos del proveedor ---")
@@ -20,7 +18,6 @@ def validar_proveedor():
         if valor.strip() == "":
             proveedor_valido = False
             break
-
         if campo == "precio" or campo == "calidad" or campo == "tiempo":
           
             if not valor.isnumeric():

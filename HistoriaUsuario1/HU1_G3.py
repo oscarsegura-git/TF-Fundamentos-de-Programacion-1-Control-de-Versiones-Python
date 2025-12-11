@@ -13,7 +13,6 @@ def datos_incompletos(proveedor):
 
         if campo not in proveedor or proveedor[campo] == "" or proveedor[campo] is None:
             campos_faltantes.append(campo)
-
         i = i + 1
 
     if len(campos_faltantes) > 0:

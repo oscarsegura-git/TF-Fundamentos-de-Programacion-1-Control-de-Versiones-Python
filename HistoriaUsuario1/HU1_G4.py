@@ -12,7 +12,6 @@ def valores_invalidos(proveedor):
 
         minimo, maximo = rangos_permitidos[campo]
         valor = proveedor[campo]
-
         if valor < minimo or valor > maximo:
             campos_invalidos.append(campo)
 
